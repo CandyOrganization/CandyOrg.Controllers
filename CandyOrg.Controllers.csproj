@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>CandyOrg.Controllers</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>artokit</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/CandyOrganization/CandyOrg.Controllers</RepositoryUrl>
+        <RootNamespace>CandyOrg.Controllers</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="candyorg.auth" Version="1.0.0" />
+        <PackageReference Include="candyorg.result" Version="1.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.13" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include=".github\workflows\publish.yml" />
+    </ItemGroup>
+</Project>
