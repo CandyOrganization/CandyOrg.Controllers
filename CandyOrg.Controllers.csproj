@@ -12,14 +12,10 @@
         <RootNamespace>CandyOrg.Controllers</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="candyorg.auth" Version="1.0.0" />
-        <PackageReference Include="candyorg.result" Version="1.0.0" />
+        <PackageReference Include="Candyorg.Auth" Version="1.0.0" />
+        <PackageReference Include="Candyorg.Result" Version="1.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.13" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Content Include=".github\workflows\publish.yml" />
     </ItemGroup>
 </Project>
