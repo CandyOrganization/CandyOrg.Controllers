@@ -5,14 +5,14 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>CandyOrg.Controllers</PackageId>
-        <Version>1.1.1</Version>
+        <Version>1.2.0</Version>
         <Authors>artokit</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/CandyOrganization/CandyOrg.Controllers</RepositoryUrl>
         <RootNamespace>CandyOrg.Controllers</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Candyorg.Auth" Version="1.1.0" />
+        <PackageReference Include="Candyorg.Auth" Version="1.2.0" />
         <PackageReference Include="Candyorg.Result" Version="1.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.13" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
