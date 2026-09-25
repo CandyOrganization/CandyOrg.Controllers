@@ -1,4 +1,4 @@
-﻿using Core.Auth.Tokens;
+﻿using CandyOrg.Auth.Tokens;
 
 namespace CandyOrg.Controllers.Extensions;
 

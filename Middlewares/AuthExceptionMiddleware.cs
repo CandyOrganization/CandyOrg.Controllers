@@ -1,4 +1,4 @@
-﻿using Core.Auth.Exceptions;
+﻿using CandyOrg.Auth.Exceptions;
 using Microsoft.AspNetCore.Http;
 
 namespace CandyOrg.Controllers.Middlewares;

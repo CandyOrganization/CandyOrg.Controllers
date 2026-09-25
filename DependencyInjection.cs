@@ -1,4 +1,4 @@
-﻿using Core.Auth.Common.Settings;
+﻿using CandyOrg.Auth.Common.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.JsonWebTokens;

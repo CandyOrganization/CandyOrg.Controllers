@@ -1,5 +1,5 @@
 ﻿using CandyOrg.Controllers.Extensions;
-using Core.Auth.Tokens;
+using CandyOrg.Auth.Tokens;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
