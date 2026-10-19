@@ -1,7 +1,7 @@
-﻿using CandyOrg.Auth.Exceptions;
+﻿using AlfaHackaton.Auth.Exceptions;
 using Microsoft.AspNetCore.Http;
 
-namespace CandyOrg.Controllers.Middlewares;
+namespace AlfaHackaton.Controllers.Middlewares;
 
 public sealed class AuthExceptionMiddleware : IMiddleware
 {

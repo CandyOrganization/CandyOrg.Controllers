@@ -1,11 +1,11 @@
-﻿using CandyOrg.Auth.Common.Settings;
+﻿using AlfaHackaton.Auth.Common.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-namespace CandyOrg.Controllers;
+namespace AlfaHackaton.Controllers;
 
 public static class DependencyInjection
 {

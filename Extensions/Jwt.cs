@@ -1,6 +1,6 @@
-﻿using CandyOrg.Auth.Tokens;
+﻿using AlfaHackaton.Auth.Tokens;
 
-namespace CandyOrg.Controllers.Extensions;
+namespace AlfaHackaton.Controllers.Extensions;
 
 public static class Jwt
 {

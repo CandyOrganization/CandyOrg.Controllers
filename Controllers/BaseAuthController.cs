@@ -1,11 +1,11 @@
-﻿using CandyOrg.Auth.Common;
-using CandyOrg.Controllers.Extensions;
-using CandyOrg.Auth.Tokens;
+﻿using AlfaHackaton.Auth.Common;
+using AlfaHackaton.Auth.Tokens;
+using AlfaHackaton.Controllers.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CandyOrg.Controllers.Controllers;
+namespace AlfaHackaton.Controllers.Controllers;
 
 [ApiController]
 [Authorize]

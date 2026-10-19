@@ -1,24 +1,24 @@
-﻿using CandyOrg.Result;
+﻿using AlfaHackaton.Result.Errors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CandyOrg.Controllers.Controllers;
+namespace AlfaHackaton.Controllers.Controllers;
 
 public abstract class BaseController : ControllerBase
 {
-    protected IActionResult Problem<T>(Result<T> result)
+    protected IActionResult Problem<T>(Result.Result<T> result)
     {
-        var statusCode = result.Code switch
+        var statusCode = result.Error.Type switch
         {
-            ErrorCode.Forbidden => StatusCodes.Status403Forbidden,
-            ErrorCode.NotFound => StatusCodes.Status404NotFound,
-            ErrorCode.Unauthorized => StatusCodes.Status401Unauthorized,
-            ErrorCode.Validation => StatusCodes.Status400BadRequest,
+            ErrorType.NoRights => StatusCodes.Status403Forbidden,
+            ErrorType.NotFound => StatusCodes.Status404NotFound,
+            ErrorType.Unauthorized => StatusCodes.Status401Unauthorized,
+            ErrorType.CorruptedInfo => StatusCodes.Status400BadRequest,
             _ => StatusCodes.Status500InternalServerError,
         };
-        if (statusCode == StatusCodes.Status400BadRequest && result.Value is not null)
+        if (statusCode == StatusCodes.Status400BadRequest && result.Content is not null)
         {
-            return new ObjectResult(result.Value) { StatusCode = statusCode };
+            return new ObjectResult(result.Content) { StatusCode = statusCode };
         }
 
         if (result.Error is null)
@@ -26,14 +26,14 @@ public abstract class BaseController : ControllerBase
             return StatusCode(statusCode);
         }
 
-        return new ObjectResult(new { ErrorMessage = result.Error.Message }) { StatusCode = statusCode };
+        return new ObjectResult(new { ErrorMessage = result.Error.Title }) { StatusCode = statusCode };
     }
 
-    protected IActionResult OkOrProblem<T>(Result<T> result)
+    protected IActionResult OkOrProblem<T>(Result.Result<T> result)
     {
-        if (result.IsSuccess)
+        if (result.Error is null)
         {
-            return Ok(result.Value);
+            return Ok(result.Content);
         }
         
         return Problem(result);
